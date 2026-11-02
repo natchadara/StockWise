@@ -1,0 +1,157 @@
+/* base.css : สี ตัวอักษร ปุ่ม ที่ใช้ทุกหน้า */
+
+:root {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #172b45;
+    background: #f8fafc;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    --navy: #163b65;
+    --navy-deep: #102e50;
+    --blue: #2563eb;
+    --blue-soft: #eff6ff;
+    --canvas: #f8fafc;
+    --surface: #fff;
+    --text: #172b45;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --green: #15803d;
+    --green-soft: #f0fdf4;
+    --amber: #b45309;
+    --amber-soft: #fffbeb;
+    --red: #b91c1c;
+    --red-soft: #fef2f2;
+    --sidebar-width: 256px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    background: var(--canvas);
+    color: var(--text);
+    font-size: 14px;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1d4ed8;
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.7;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.button {
+    display: inline-flex;
+    min-height: 38px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 13px;
+    border: 1px solid var(--blue);
+    border-radius: 7px;
+    background: var(--blue);
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+.button svg {
+    width: 16px;
+    height: 16px;
+}
+
+.button:hover {
+    border-color: #1d4ed8;
+    background: #1d4ed8;
+    color: #fff;
+}
+
+.button-small {
+    min-height: 34px;
+    padding: 7px 11px;
+    font-size: 11px;
+}
+
+.button-secondary {
+    border-color: var(--border);
+    background: #fff;
+    color: #475569;
+}
+
+.button-secondary:hover {
+    border-color: #cbd5e1;
+    background: #f8fafc;
+    color: var(--navy);
+}
+
+.button-danger {
+    border-color: #dc2626;
+    background: #dc2626;
+}
+
+.button-danger:hover {
+    border-color: #b91c1c;
+    background: #b91c1c;
+}
+
+.table-card,
+.form-card,
+.detail-card {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.025);
+}
+
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+

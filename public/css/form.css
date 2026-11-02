@@ -1,0 +1,107 @@
+/* form.css : ฟอร์ม และหน้าดูรายละเอียด */
+
+.form-card {
+    max-width: 700px;
+    padding: 24px;
+}
+
+.narrow-card {
+    max-width: 460px;
+}
+
+.stacked-form {
+    display: grid;
+    gap: 9px;
+}
+
+.stacked-form label {
+    margin-top: 6px;
+    color: #334155;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.stacked-form input,
+.stacked-form select,
+.stacked-form textarea {
+    width: 100%;
+    min-height: 40px;
+    padding: 9px 11px;
+    border: 1px solid #d7e0ea;
+    border-radius: 6px;
+    background: #fff;
+    color: var(--text);
+    font-size: 12px;
+}
+
+.stacked-form textarea {
+    resize: vertical;
+}
+
+.stacked-form input:focus,
+.stacked-form select:focus,
+.stacked-form textarea:focus,
+.search-control:focus-within,
+.filter-control:focus-within {
+    border-color: #93b4ef;
+    outline: 3px solid rgba(37, 99, 235, 0.1);
+}
+
+.field-error {
+    margin-top: -5px;
+    color: var(--red);
+    font-size: 10px;
+}
+
+.detail-card {
+    max-width: 850px;
+    padding: 22px 24px;
+}
+
+.detail-list {
+    display: grid;
+    margin: 0 0 22px;
+}
+
+.detail-list > div {
+    display: grid;
+    grid-template-columns: minmax(140px, 220px) 1fr;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid #edf1f5;
+}
+
+.detail-list dt {
+    color: #8291a4;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.detail-list dd {
+    margin: 0;
+    color: #334155;
+    font-size: 12px;
+}
+
+.action-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.action-row form {
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    .detail-list > div {
+        grid-template-columns: 1fr;
+        gap: 3px;
+    }
+
+    .form-card,
+    .detail-card {
+        padding: 18px;
+    }
+}
